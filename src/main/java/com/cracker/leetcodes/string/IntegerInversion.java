@@ -1,4 +1,4 @@
-package com.cracker.leetcodes;
+package com.cracker.leetcodes.string;
 
 /**
  * This is Leetcode number 7: Integer inversion.
