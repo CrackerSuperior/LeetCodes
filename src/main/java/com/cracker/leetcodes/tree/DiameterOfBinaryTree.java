@@ -9,32 +9,20 @@ public class DiameterOfBinaryTree {
         if (root == null) {
             return 0;
         }
-        int[] max = {0};
-        maxDiameter(root, max);
-        return max[0];
+        int[] maxDiameter = {0};
+        maxLength(root, maxDiameter);
+        return maxDiameter[0];
     }
 
-    private void maxDiameter(final TreeNode root, final int[] max) {
-        if (root == null) {
-            return;
-        }
-        int maxLeft;
-        int maxRight;
-        maxLeft = maxLength(root.left);
-        maxRight = maxLength(root.right);
-        int maxDiameter = maxLeft + maxRight;
-        max[0] = Math.max(maxDiameter, max[0]);
-        maxDiameter(root.left, max);
-        maxDiameter(root.right, max);
-    }
-
-    private int maxLength(final TreeNode root) {
+    private int maxLength(final TreeNode root, final int[] maxDiameter) {
         if (root == null) {
             return 0;
         }
-        int max;
-        max = Math.max(maxLength(root.right) + 1, maxLength(root.left) + 1);
-        return max;
+        int maxLeft = maxLength(root.left, maxDiameter);
+        int maxRight = maxLength(root.right, maxDiameter);
+        int maxLength = maxLeft + maxRight;
+        maxDiameter[0] = Math.max(maxLength, maxDiameter[0]);
+        return Math.max(maxLeft, maxRight) + 1;
     }
 
     public class TreeNode {
