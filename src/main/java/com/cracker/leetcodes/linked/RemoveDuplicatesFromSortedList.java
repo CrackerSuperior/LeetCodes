@@ -28,6 +28,23 @@ public class RemoveDuplicatesFromSortedList {
         return result;
     }
 
+    public ListNode deleteDuplicatesPlus(final ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode fast = head.next;
+        ListNode slow = head;
+        while (fast != null) {
+            if (slow.val != fast.val) {
+                slow.next = fast;
+                slow = slow.next;
+            }
+            fast = fast.next;
+        }
+        slow.next = null;
+        return head;
+    }
+
     static class ListNode {
         private int val;
 
