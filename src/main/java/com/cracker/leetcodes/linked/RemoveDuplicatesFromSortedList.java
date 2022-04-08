@@ -46,6 +46,7 @@ public class RemoveDuplicatesFromSortedList {
     }
 
     static class ListNode {
+
         private int val;
 
         private ListNode next;
