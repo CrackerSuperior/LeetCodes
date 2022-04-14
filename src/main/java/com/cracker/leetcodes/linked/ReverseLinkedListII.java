@@ -5,9 +5,9 @@ package com.cracker.leetcodes.linked;
  */
 public class ReverseLinkedListII {
 
-    private ListNode mark = null;
+    private ListNode mark;
 
-    public ListNode reverseBetween(ListNode head, int left, int right) {
+    public ListNode reverseBetween(final ListNode head, final int left, final int right) {
         if (left == 1) {
             return reverseN(head, right);
         }
@@ -15,7 +15,7 @@ public class ReverseLinkedListII {
         return head;
     }
 
-    public ListNode reverseN(ListNode head, int n) {
+    public ListNode reverseN(final ListNode head, final int n) {
         if (n == 1) {
             mark = head.next;
             return head;
