@@ -8,7 +8,7 @@ import java.util.Map;
  */
 public class LongestSubstringWithoutRepeatingCharacters {
 
-    public int lengthOfLongestSubstring(String s) {
+    public int lengthOfLongestSubstring(final String s) {
         Map<Character, Integer> window = new HashMap<>();
         int left = 0;
         int right = 0;
