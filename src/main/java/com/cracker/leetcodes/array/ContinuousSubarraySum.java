@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * This is Leetcode number 704: Binary Search.
+ * This is Leetcode number 523: Continuous Subarray Sum.
  */
 public class ContinuousSubarraySum {
 
