@@ -32,8 +32,7 @@ public class SortAnArray {
     }
 
     private int partition(final int[] nums, final int leftIndex, final int rightIndex) {
-        int pivotIndex = new Random().nextInt(rightIndex - leftIndex + 1) + leftIndex;
-        int pivot = nums[pivotIndex];
+        int pivot = nums[leftIndex];
         int left = leftIndex + 1;
         int right = rightIndex;
         while (left <= right) {
