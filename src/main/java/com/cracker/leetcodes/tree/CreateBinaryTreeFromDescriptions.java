@@ -38,7 +38,6 @@ public class CreateBinaryTreeFromDescriptions {
         return null;
     }
 
-
     public TreeNode createBinaryTreePlus(final int[][] descriptions) {
         TreeNode[] nodes = new TreeNode[100001];
         for (int[] node : descriptions) {
