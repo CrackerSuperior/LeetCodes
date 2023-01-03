@@ -1,5 +1,7 @@
 package com.cracker.leetcodes.tree;
 
+import com.cracker.leetcodes.tree.base.TreeNode;
+
 /**
  * This is Leetcode number 1123: Lowest Common Ancestor of The Deepest Leaves.
  *      This question is the same as leetcode's 865 questions.
@@ -34,27 +36,6 @@ public class LowestCommonAncestorOfDeepestLeaves {
         Result(final TreeNode node, final int depth) {
             this.node = node;
             this.depth = depth;
-        }
-    }
-
-    public static class TreeNode {
-
-        private int val;
-
-        private TreeNode left;
-
-        private TreeNode right;
-
-        TreeNode() { }
-
-        TreeNode(final int val) {
-            this.val = val;
-        }
-
-        TreeNode(final int val, final TreeNode left, final TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
         }
     }
 }

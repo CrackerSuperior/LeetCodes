@@ -1,5 +1,7 @@
 package com.cracker.leetcodes.tree;
 
+import com.cracker.leetcodes.tree.base.TreeNode;
+
 /**
  * This is Leetcode number 108: Convert Sorted Array to Binary Search Tree.
  */
@@ -18,26 +20,5 @@ public class ConvertSortedArrayToBinarySearchTree {
         root.left = dp(nums, left, mid - 1);
         root.right = dp(nums, mid + 1, right);
         return root;
-    }
-
-    static class TreeNode {
-
-        private int val;
-
-        private TreeNode left;
-
-        private TreeNode right;
-
-        TreeNode() { }
-
-        TreeNode(final int val) {
-            this.val = val;
-        }
-
-        TreeNode(final int val, final TreeNode left, final TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

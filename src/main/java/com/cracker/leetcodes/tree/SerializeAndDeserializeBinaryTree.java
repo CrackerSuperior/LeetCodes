@@ -1,5 +1,7 @@
 package com.cracker.leetcodes.tree;
 
+import com.cracker.leetcodes.tree.base.TreeNode;
+
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -43,26 +45,5 @@ public class SerializeAndDeserializeBinaryTree {
         root.left = build(results);
         root.right = build(results);
         return root;
-    }
-
-    public static class TreeNode {
-
-        private int val;
-
-        private TreeNode left;
-
-        private TreeNode right;
-
-        TreeNode() { }
-
-        TreeNode(final int val) {
-            this.val = val;
-        }
-
-        TreeNode(final int val, final TreeNode left, final TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

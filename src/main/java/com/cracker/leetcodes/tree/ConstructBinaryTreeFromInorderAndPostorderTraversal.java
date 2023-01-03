@@ -1,5 +1,7 @@
 package com.cracker.leetcodes.tree;
 
+import com.cracker.leetcodes.tree.base.TreeNode;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,26 +33,5 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
         root.right = build(map, index + 1,
                 postorder, posStart + leftSize, posEnd - 1);
         return root;
-    }
-
-    public static class TreeNode {
-
-        private int val;
-
-        private TreeNode left;
-
-        private TreeNode right;
-
-        TreeNode() { }
-
-        TreeNode(final int val) {
-            this.val = val;
-        }
-
-        TreeNode(final int val, final TreeNode left, final TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

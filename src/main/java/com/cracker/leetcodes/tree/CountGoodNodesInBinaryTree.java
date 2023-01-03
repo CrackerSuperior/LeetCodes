@@ -1,5 +1,7 @@
 package com.cracker.leetcodes.tree;
 
+import com.cracker.leetcodes.tree.base.TreeNode;
+
 /**
  * This is Leetcode number 1448: Count Good Nodes in Binary Tree.
  */
@@ -47,26 +49,5 @@ public class CountGoodNodesInBinaryTree {
         int tempMax = Math.max(pathMax, root.val);
         dpPlus(root.left, tempMax);
         dpPlus(root.right, tempMax);
-    }
-
-    public static class TreeNode {
-
-        private int val;
-
-        private TreeNode left;
-
-        private TreeNode right;
-
-        TreeNode() { }
-
-        TreeNode(final int val) {
-            this.val = val;
-        }
-
-        TreeNode(final int val, final TreeNode left, final TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

@@ -1,5 +1,7 @@
 package com.cracker.leetcodes.tree;
 
+import com.cracker.leetcodes.tree.base.TreeNode;
+
 /**
  * This is Leetcode Interview questions 04.02: Minimum Height Tree LCCI.
  */
@@ -18,26 +20,5 @@ public class Interview0402MinimumHeightTreeLCCI {
         root.left = dp(nums, left, mid - 1);
         root.right = dp(nums, mid + 1, right);
         return root;
-    }
-
-    public static class TreeNode {
-
-        private int val;
-
-        private TreeNode left;
-
-        private TreeNode right;
-
-        TreeNode() { }
-
-        TreeNode(final int val) {
-            this.val = val;
-        }
-
-        TreeNode(final int val, final TreeNode left, final TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

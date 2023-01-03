@@ -1,5 +1,7 @@
 package com.cracker.leetcodes.tree;
 
+import com.cracker.leetcodes.tree.base.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -12,7 +14,7 @@ public class CompleteBinaryTreeInserter {
         
         private final TreeNode root;
         
-        private Queue<TreeNode> bottom = new LinkedList<>();
+        private final Queue<TreeNode> bottom = new LinkedList<>();
 
         CBTInserter(final TreeNode root) {
             this.root = root;
@@ -47,27 +49,6 @@ public class CompleteBinaryTreeInserter {
 
         public TreeNode getRoot() {
             return root;
-        }
-    }
-
-    public static class TreeNode {
-
-        private int val;
-
-        private TreeNode left;
-
-        private TreeNode right;
-
-        TreeNode() { }
-
-        TreeNode(final int val) {
-            this.val = val;
-        }
-
-        TreeNode(final int val, final TreeNode left, final TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
         }
     }
 }

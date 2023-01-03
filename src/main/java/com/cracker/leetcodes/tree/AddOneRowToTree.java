@@ -1,5 +1,7 @@
 package com.cracker.leetcodes.tree;
 
+import com.cracker.leetcodes.tree.base.TreeNode;
+
 /**
  * This is Leetcode number 623: Add One Row to Tree.
  */
@@ -26,26 +28,5 @@ public class AddOneRowToTree {
         addOneRow(root.left, val, depth - 1);
         addOneRow(root.right, val, depth - 1);
         return root;
-    }
-
-    public class TreeNode {
-
-        private int val;
-
-        private TreeNode left;
-
-        private TreeNode right;
-
-        TreeNode() { }
-
-        TreeNode(final int val) {
-            this.val = val;
-        }
-
-        TreeNode(final int val, final TreeNode left, final TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

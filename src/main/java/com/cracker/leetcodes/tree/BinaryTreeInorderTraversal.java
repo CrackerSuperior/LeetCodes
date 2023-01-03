@@ -1,5 +1,7 @@
 package com.cracker.leetcodes.tree;
 
+import com.cracker.leetcodes.tree.base.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,26 +24,5 @@ public class BinaryTreeInorderTraversal {
         dp(root.left, result);
         result.add(root.val);
         dp(root.right, result);
-    }
-
-    public class TreeNode {
-
-        private int val;
-
-        private TreeNode left;
-
-        private TreeNode right;
-
-        TreeNode() { }
-
-        TreeNode(final int val) {
-            this.val = val;
-        }
-
-        TreeNode(final int val, final TreeNode left, final TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

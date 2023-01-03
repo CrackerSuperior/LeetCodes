@@ -1,5 +1,7 @@
 package com.cracker.leetcodes.tree;
 
+import com.cracker.leetcodes.tree.base.TreeNode;
+
 /**
  * This is Leetcode number 1339: Maximum Product of Splitted Binary Tree.
  */
@@ -27,26 +29,5 @@ public class MaximumProductOfSplitBinaryTree {
         int rootSum = left + right + root.val;
         result = Math.max(result, (long) rootSum * (treeSum - rootSum));
         return rootSum;
-    }
-
-    public static class TreeNode {
-
-        private int val;
-
-        private TreeNode left;
-
-        private TreeNode right;
-
-        TreeNode() { }
-
-        TreeNode(final int val) {
-            this.val = val;
-        }
-
-        TreeNode(final int val, final TreeNode left, final TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }
