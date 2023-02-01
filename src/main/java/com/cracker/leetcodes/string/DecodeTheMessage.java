@@ -7,13 +7,10 @@ public class DecodeTheMessage {
 
     public String decodeMessage(final String key, final String message) {
         char[] keyChar = new char[26];
-        for (int i = 0, len = keyChar.length; i < len; i++) {
-            keyChar[i] = '0';
-        }
         char letter = 'a';
         for (char c : key.toCharArray()) {
             int i = c - 'a';
-            if ((i >= 0 && i <= 25) && keyChar[i] == '0') {
+            if ((i >= 0 && i <= 25) && keyChar[i] == 0) {
                 keyChar[i] = letter++;
             }
         }
